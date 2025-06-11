@@ -43,7 +43,7 @@ export default function SkillsSection() {
         >
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Spécialisée dans le développement backend avec JavaScript, je maîtrise les technologies essentielles pour
-            créer des APIs robustes et des serveurs performants avec des ORMs modernes.
+            créer des APIs robustes et des serveurs performants avec des ORM modernes.
           </p>
         </motion.div>
 
@@ -73,59 +73,6 @@ export default function SkillsSection() {
         </div>
 
         {/* Technologies utilisées */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="text-center"
-        >
-          <h3 className="text-2xl font-bold mb-8 font-serif">Stack Technique</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {[
-              "Node.js",
-              "Express.js",
-              "MongoDB",
-              "Mongoose",
-              "Prisma",
-              "PostgreSQL",
-              "JWT",
-              "bcrypt",
-              "Multer",
-              "Postman",
-              "Git",
-              "Heroku",
-            ].map((tech, index) => (
-              <motion.span
-                key={tech}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ scale: 1.05 }}
-                className="px-4 py-2 bg-[#FED4BE]/10 border border-[#FED4BE]/30 rounded-full text-gray-700 dark:text-gray-300 font-medium hover:bg-[#FED4BE]/20 transition-all duration-300"
-              >
-                {tech}
-              </motion.span>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Focus Backend */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <div className="inline-flex items-center gap-4 bg-[#FED4BE]/10 px-8 py-4 rounded-full border border-[#FED4BE]/30">
-            <div className="w-12 h-12 bg-[#FED4BE] rounded-full flex items-center justify-center">
-              <span className="text-gray-800 font-bold">BE</span>
-            </div>
-            <div className="text-left">
-              <h4 className="font-bold text-lg">Spécialisation Backend JavaScript</h4>
-              <p className="text-gray-600 dark:text-gray-300">APIs REST • ORMs • Base de données • Serveurs web</p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

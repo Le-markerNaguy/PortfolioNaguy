@@ -34,10 +34,6 @@ export const skillsData = {
         name: "Gestion des fichiers",
         description: "Upload, stockage et manipulation de fichiers"
       },
-      {
-        name: "Validation des données",
-        description: "Vérification et nettoyage des données d'entrée",
-      },
     ],
   },
 }

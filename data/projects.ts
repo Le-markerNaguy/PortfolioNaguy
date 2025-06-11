@@ -3,40 +3,26 @@ import type { Project } from "@/types"
 export const projects: Project[] = [
   {
     id: 1,
-    title: "API REST avec MongoDB",
+    title: "Gestion de tache",
     category: "Backend",
     image: "/Capture d'écran 2025-06-10 171839.png",
     tech: ["Node.js", "Express"],
     description:
-     "" ,
+     "Site de gestion des tâches.Système d'authentification complet avec JWT (JSON Web Tokens). Fonctionnalités d'inscription et connexion sécurisées, hashage des mots de passe avec bcrypt et gestion des sessions utilisateur avec stockage sécurisé des tokens." ,
     demoUrl: "https://todo-liste-kui1.vercel.app/",
     codeUrl: "https://github.com/Le-markerNaguy/TodoListe.git",
-
     size: "medium",
   },
   {
     id: 2,
-    title: "API avec Prisma ORM",
+    title: "Inscription anniversaire",
     category: "Backend",
     image: "/Capture d'écran 2025-06-10 171630.png",
     tech: ["Node.js", "Express", "Prisma", "PostgreSQL"],
     description:
-      "API moderne utilisant Prisma ORM pour la gestion de base de données PostgreSQL. Type-safety complète avec TypeScript, migrations automatiques, requêtes optimisées et interface d'administration Prisma Studio intégrée. Modélisation avancée des relations entre entités.",
+      "Site d'inscription à un anniversaire avec envoie d'email de participation ,API moderne utilisant Prisma ORM pour la gestion de base de données PostgreSQL.",
     demoUrl: "https://anniversaire-6xa3.vercel.app/",
     codeUrl: "https://github.com/Le-markerNaguy/anniversaire.git",
-    size: "medium",
-  },
-  {
-    id: 3,
-    title: "API d'Authentification JWT",
-    category: "Fullstack",
-    image: "/Capture d'écran 2025-06-10 172904.png",
-    tech: ["Node.js", "Express", "MongoDB", "JWT", "bcrypt"],
-    description:
-      "Système d'authentification complet avec JWT (JSON Web Tokens). Fonctionnalités d'inscription et connexion sécurisées, protection des routes avec middleware d'authentification, hashage des mots de passe avec bcrypt et gestion des sessions utilisateur avec stockage sécurisé des tokens.",
-
-    demoUrl: "https://gab-9.vercel.app/",
-    codeUrl: "https://github.com/Le-markerNaguy/GAB9.git",
     size: "medium",
   },
   {
@@ -53,4 +39,4 @@ export const projects: Project[] = [
   }
 ]
 
-export const categories = ["Tous", "Backend", "Fullstack", "Frontend"] as const
+export const categories = ["Tous", "Backend", "Fullstack"] as const

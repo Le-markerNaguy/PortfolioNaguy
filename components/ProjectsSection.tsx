@@ -25,8 +25,6 @@ export default function ProjectsSection() {
         return <Server className="w-4 h-4" />
       case "Fullstack":
         return <Code className="w-4 h-4" />
-      case "Frontend":
-        return <Code className="w-4 h-4" />
       default:
         return <Server className="w-4 h-4" />
     }
@@ -82,10 +80,11 @@ export default function ProjectsSection() {
               whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveFilter(category)}
-              className={`px-8 py-4 rounded-2xl font-semibold transition-all duration-300 flex items-center gap-3 shadow-lg backdrop-blur-sm ${activeFilter === category
+              className={`px-8 py-4 rounded-2xl font-semibold transition-all duration-300 flex items-center gap-3 shadow-lg backdrop-blur-sm ${
+                activeFilter === category
                   ? "bg-gradient-to-r from-[#FED4BE] to-[#F8B8A0] text-gray-800 shadow-[#FED4BE]/25"
                   : "bg-white/80 dark:bg-gray-800/80 hover:bg-[#FED4BE]/10 border border-gray-200 dark:border-gray-700"
-                }`}
+              }`}
             >
               {getCategoryIcon(category)}
               <span className="text-base">{category}</span>

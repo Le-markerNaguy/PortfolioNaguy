@@ -11,10 +11,8 @@ export default function ContactSection() {
   const [status, setStatus] = useState<string | null>(null)
 
   const socialLinks = [
-    { icon: Mail, href: "mailto:naguy.minkue@example.com", color: "#FFC2E2" },
-    { icon: Linkedin, href: "#", color: "#B892FF" },
-    { icon: Github, href: "#", color: "#90A955" },
-    { icon: Twitter, href: "#", color: "#FFC2E2" },
+    { icon: Mail, href: "mailto:naguyjuccedem@gmail.com", color: "#FFC2E2" },
+    { icon: Github, href: "https://github.com/Le-markerNaguy", color: "#90A955" }
   ]
 
   async function handleSubmit(event: React.FormEvent) {

@@ -20,7 +20,7 @@ export default function Footer() {
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
               <a
-                href="https://github.com/naguy"
+                href="https://github.com/Le-markerNaguy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#FED4BE]/10 flex items-center justify-center hover:bg-[#FED4BE]/30 transition-colors"
@@ -28,7 +28,7 @@ export default function Footer() {
                 <Github className="w-5 h-5 text-gray-700 dark:text-gray-300" />
               </a>
               <a
-                href="mailto:naguy.minkue@example.com"
+                href="mailto:naguyjuccedem@gmail.com"
                 className="w-10 h-10 rounded-full bg-[#FED4BE]/10 flex items-center justify-center hover:bg-[#FED4BE]/30 transition-colors"
               >
                 <Mail className="w-5 h-5 text-gray-700 dark:text-gray-300" />
@@ -74,7 +74,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="text-center md:text-right">
             <h3 className="text-lg font-bold mb-4">Contact</h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-2">naguy.minkue@example.com</p>
+            <p className="text-gray-600 dark:text-gray-300 mb-2">naguyjuccedem@gmail.com</p>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 px-4 py-2 bg-[#FED4BE] text-gray-800 rounded-lg text-sm font-medium hover:bg-[#F8B8A0] transition-all duration-300"
