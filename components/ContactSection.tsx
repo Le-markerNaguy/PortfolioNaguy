@@ -118,7 +118,7 @@ export default function ContactSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="w-full bg-gradient-to-r from-[#FFC2E2] to-[#B892FF] text-white py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="w-full bg-[#FED4BE] text-gray-800 py-3 rounded-lg font-semibold shadow-lg hover:bg-[#F8B8A0] hover:shadow-xl transition-all duration-300"
             >
               Envoyer le message
             </motion.button>

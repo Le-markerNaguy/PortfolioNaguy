@@ -1,18 +1,27 @@
 export interface Project {
   id: number
   title: string
-  category: "Backend" | "Frontend" | "Fullstack"
+  category: "Backend" | "Fullstack" | "Frontend"
   image: string
   tech: string[]
   description: string
   demoUrl: string
   codeUrl: string
-  size: "large" | "medium" | "small" | "tall"
+  size: "medium"
 }
 
 export interface Skill {
   name: string
-  category: "Backend" | "Frontend" | "DevOps"
+  description: string
+  level: string
+}
+
+export interface SkillCategory {
+  title: string
+  icon: string
+  color: string
+  textColor: string
+  skills: Skill[]
 }
 
 export interface TimelineItem {
