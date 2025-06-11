@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  category    String
+  image       String
+  tech        String[]
+  description String
+  demoUrl     String
+  codeUrl     String
+  size        String
+}
+
+model SkillCategory {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique // backend, frontend, devops
+  title     String
+  icon      String
+  color     String
+  textColor String
+  skills    Skill[]
+}
+
+model Skill {
+  id          Int    @id @default(autoincrement())
+  name        String
+  categoryId  Int
+  category    SkillCategory @relation(fields: [categoryId], references: [id])
+}
+
+model Timeline {
+  id          Int    @id @default(autoincrement())
+  year        String
+  title       String
+  description String
+}
