@@ -59,7 +59,7 @@ export default function HeroSection() {
                 <div className="absolute inset-4 bg-white dark:bg-gray-800 rounded-3xl transform rotate-45 overflow-hidden">
                   <div className="w-full h-full transform -rotate-45 scale-110">
                     <Image
-                      src="/nag.jpg"
+                      src="/WhatsApp Image 2025-06-12 at 13.05.04.jpeg"
                       alt="Naguy - Développeuse Backend"
                       width={320}
                       height={320}

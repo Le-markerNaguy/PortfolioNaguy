@@ -49,8 +49,6 @@ export default function ProjectsSection() {
             className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 font-serif leading-tight"
           >
             Mes Projets
-            <br />
-            <span className="bg-gradient-to-r from-[#FED4BE] to-[#F8B8A0] bg-clip-text text-transparent">Backend</span>
           </motion.h2>
 
           <motion.p
@@ -59,8 +57,8 @@ export default function ProjectsSection() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-gray-600 dark:text-gray-300 text-xl leading-relaxed max-w-3xl mx-auto"
           >
-            Découvrez mes 5 projets principaux de développement backend, chacun présentant des fonctionnalités
-            spécifiques et des technologies modernes pour créer des solutions serveur robustes et performantes.
+            Découvrez mes projets principaux de développement backend et frontend, chacun présentant des fonctionnalités
+            spécifiques et des technologies modernes pour créer des solutions serveur robustes, performantes et des interfaces utilisateur attrayantes.
           </motion.p>
         </div>
 

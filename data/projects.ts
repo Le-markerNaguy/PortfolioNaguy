@@ -27,16 +27,16 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Système de Gestion de Fichiers",
-    category: "Backend",
-    image: "/placeholder.svg?height=300&width=300",
+    title: "Landing page Gabon",
+    category: "Frontend",
+    image: "/Capture d'écran 2025-06-10 172904.png",
     tech: ["Node.js", "Express", "Multer", "MongoDB"],
     description:
-      "Serveur backend spécialisé dans l'upload et la gestion de fichiers avec stockage des métadonnées en base MongoDB. Validation des types de fichiers, limitation de taille configurable, organisation en collections et système de récupération optimisée avec gestion des permissions.",
-    demoUrl: "https://file-manager-naguy.herokuapp.com",
-    codeUrl: "https://github.com/naguy/file-manager",
+      "Landing page d'une Révolution politique",
+    demoUrl: "https://projet-gabon-9.vercel.app/",
+    codeUrl: "https://github.com/Le-markerNaguy/projetGABON9.git",
     size: "medium",
   }
 ]
 
-export const categories = ["Tous", "Backend", "Fullstack"] as const
+export const categories = ["Tous", "Backend", "Fullstack", "Frontend"] as const
