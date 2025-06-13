@@ -116,7 +116,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             >
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <span>2024</span>
+                <span>2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <Code className="w-4 h-4" />

@@ -19,10 +19,10 @@ export default function HeroSection() {
 
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4">Naguy Juccede MINKUE MI NDONG</p>
 
-            <p className="text-lg text-gray-500 dark:text-gray-400 mb-2">Spécialisée APIs REST • Node.js</p>
+            <p className="text-lg text-gray-500 dark:text-gray-400 mb-2">Spécialisée APIs REST • Base de données</p>
 
             <p className="text-md text-gray-400 dark:text-gray-500 mb-8">
-              Niveau Débutante • Passionnée de développement serveur
+               • Passionnée de développement serveur
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -67,6 +67,19 @@ export default function HeroSection() {
                     />
                   </div>
                 </div>
+              </div>
+
+              {/* Bouton de téléchargement du CV */}
+              <div className="flex justify-center mt-6">
+                <a
+                  href="/CV_MINKEU_MI_NDONG_Naguy_2024.pdf"
+                  download
+                  className="bg-gradient-to-r from-[#90A955] to-[#FED4BE] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:from-[#FED4BE] hover:to-[#90A955] hover:text-gray-800 transition-all duration-300 border-2 border-[#90A955]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Télécharger mon CV (PDF)
+                </a>
               </div>
 
               {/* Éléments décoratifs */}

@@ -13,6 +13,7 @@ export interface Project {
 export interface Skill {
   name: string
   description: string
+  details: string[]
   level: string
 }
 

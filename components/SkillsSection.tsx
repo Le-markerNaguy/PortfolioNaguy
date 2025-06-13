@@ -66,6 +66,13 @@ export default function SkillsSection() {
                     <h3 className="text-lg font-bold text-gray-800 dark:text-[#FED4BE]">{skill.name}</h3>
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">{skill.description}</p>
+                  <ul className="list-disc list-inside mt-2">
+                    {skill.details.map((detail, index) => (
+                      <li key={index} className="text-gray-600 dark:text-gray-300 text-sm">
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </motion.div>
