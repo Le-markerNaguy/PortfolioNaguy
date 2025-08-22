@@ -33,7 +33,44 @@ export const projects: Project[] = [
     demoUrl: "https://projet-gabon-9.vercel.app/",
     codeUrl: "https://github.com/Le-markerNaguy/projetGABON9.git",
     size: "medium"
-  }
+  },
+  {
+    id: 5,
+    title: "Portfolio personnel",
+    category: "Frontend",
+    image: "/capture_Portefolio.png",
+    tech: ["Next.js", "React", "TypeScript"],
+    description: "Mon portfolio personnel avec présentation de mes projets, compétences et contact. Design moderne et responsive.",
+    demoUrl: "https://portfolio-naguy.vercel.app/",
+    codeUrl: "https://github.com/Le-markerNaguy/PortfolioNaguy.git",
+    size: "medium"
+  },
+ {
+  "id": 6,
+  "title": "Application de gestion d'Université",
+  "category": "Fullstack",
+  "image": "/capture_gestion_Univ.png",
+  "tech": [
+    "Next.js 15",
+    "TypeScript",
+    "Tailwind CSS",
+    "Zustand",
+    "Express.js",
+    "Prisma",
+    "PostgreSQL",
+    "JWT",
+    "BCrypt",
+    "Nodemailer",
+    "Render",
+    "Vercel",
+    "Supabase"
+  ],
+  "description": "Plateforme full-stack pour gérer le parcours académique (L1–L3) : rôles (super admin, admin, prof, étudiant), création des formations (années, semestres, UE, modules), saisie/validation des notes, calculs automatiques des moyennes et accès étudiant sécurisé par code + JWT.",
+  "demoUrl": "https://univ-frontend.vercel.app/",
+  "codeUrl": "https://github.com/Le-markerNaguy/univ_backend",
+  "size": "medium"
+}
+,
 ]
 
 export const categories = [

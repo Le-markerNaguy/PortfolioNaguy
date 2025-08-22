@@ -34,9 +34,9 @@ export default function Portfolio() {
       <div className="min-h-screen transition-colors duration-300 bg-[#fff9f7] dark:bg-[#1A1A2E] text-gray-900 dark:text-gray-100">
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <HeroSection />
+        <AboutSection />
         <SkillsSection />
         <ProjectsSection />
-        <AboutSection />
         <ContactSection />
         <Footer />
       </div>

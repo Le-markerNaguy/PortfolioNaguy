@@ -72,7 +72,7 @@ export default function HeroSection() {
               {/* Bouton de téléchargement du CV */}
               <div className="flex justify-center mt-6">
                 <a
-                  href="/CV_MINKEU_MI_NDONG_Naguy_2024.pdf"
+                  href="/MINKUE MI NDONG.pdf"
                   download
                   className="bg-gradient-to-r from-[#90A955] to-[#FED4BE] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:from-[#FED4BE] hover:to-[#90A955] hover:text-gray-800 transition-all duration-300 border-2 border-[#90A955]"
                   target="_blank"
