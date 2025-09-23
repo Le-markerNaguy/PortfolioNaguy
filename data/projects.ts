@@ -25,13 +25,13 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Landing page politique",
-    category: "Frontend",
+    title: "Gestion de menue restaurant",
+    category: "Backend",
     image: "/Capture d'écran 2025-06-10 172904.png",
     tech: ["Next.js", "React", "TypeScript"],
-    description: "Site vitrine politique responsive avec design moderne. Optimisé SEO et gestion de contenu dynamique pour mobilisation citoyenne.",
-    demoUrl: "https://projet-gabon-9.vercel.app/",
-    codeUrl: "https://github.com/Le-markerNaguy/projetGABON9.git",
+    description: "Application de gestion de menu pour restaurant avec fonctionnalités d'ajout, de modification et de suppression de plats. Interface utilisateur moderne et responsive.",
+    demoUrl: "https://restau-frontend.vercel.app/",
+    codeUrl: "https://github.com/Le-markerNaguy/restau_backend",
     size: "medium"
   },
   {
