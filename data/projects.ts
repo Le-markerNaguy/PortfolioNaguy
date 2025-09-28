@@ -4,31 +4,20 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Gestion de tâches",
-    category: "Backend",
+    category: "Fullstack",
     image: "/Capture d'écran 2025-06-10 171839.png",
-    tech: ["Node.js", "Express"],
+    tech: ["Next.js"],
     description: "Application de todo-list avec authentification sécurisée (JWT, bcrypt). Permet l'inscription, la connexion et la gestion des tâches utilisateur. Stack: Next.js 14, Prisma, PostgreSQL, Tailwind CSS.",
     demoUrl: "https://todo-liste-kui1.vercel.app/",
     codeUrl: "https://github.com/Le-markerNaguy/TodoListe.git",
     size: "medium"
   },
   {
-    id: 2,
-    title: "Inscription anniversaire",
-    category: "Backend",
-    image: "/Capture d'écran 2025-06-10 171630.png",
-    tech: ["Node.js", "Express", "Prisma", "PostgreSQL"],
-    description: "Inscription anniversaire et reception d'email de confirmation avec code de participation. Features: formulaire de demande, notifications email, dashboard admin (validation des demandes, stats), sécurisé avec JWT et bcrypt. Stack: Next.js 14, Prisma, PostgreSQL, Tailwind CSS.",
-    demoUrl: "https://anniversaire-6xa3.vercel.app/",
-    codeUrl: "https://github.com/Le-markerNaguy/anniversaire.git",
-    size: "medium"
-  },
-  {
     id: 4,
     title: "Gestion de menue restaurant",
-    category: "Backend",
-    image: "/Capture d'écran 2025-06-10 172904.png",
-    tech: ["Next.js", "React", "TypeScript"],
+    category: "Fullstack",
+    image: "/RestauOpti.png",
+    tech: ["Next.js", "React", "TypeScript","Express"],
     description: "Application de gestion de menu pour restaurant avec fonctionnalités d'ajout, de modification et de suppression de plats. Interface utilisateur moderne et responsive.",
     demoUrl: "https://restau-frontend.vercel.app/",
     codeUrl: "https://github.com/Le-markerNaguy/restau_backend",
@@ -48,7 +37,7 @@ export const projects: Project[] = [
  {
   "id": 6,
   "title": "Application de gestion d'Université",
-  "category": "Fullstack",
+  "category": "Backend",
   "image": "/capture_gestion_Univ.png",
   "tech": [
     "Next.js 15",
