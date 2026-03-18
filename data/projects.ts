@@ -58,8 +58,19 @@ export const projects: Project[] = [
   "demoUrl": "https://univ-frontend.vercel.app/",
   "codeUrl": "https://github.com/Le-markerNaguy/univ_backend",
   "size": "medium"
-}
-,
+},
+ {
+    id: 7,
+    title: "Portfolio personnel",
+    category: "Frontend",
+    image: "/dashboard.png",
+    tech: ["Next.js", "React", "TypeScript"],
+    description: "Mon portfolio personnel avec présentation de mes projets, compétences et contact. Design moderne et responsive.",
+    demoUrl: "https://dashboard-t-six.vercel.app/auth/login",
+    codeUrl: "https://github.com/Le-markerNaguy/DashboardT.git",
+    size: "medium"
+  },
+
 ]
 
 export const categories = [
