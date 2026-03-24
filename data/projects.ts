@@ -34,8 +34,19 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/Le-markerNaguy/PortfolioNaguy.git",
     size: "medium"
   },
+  {
+    id: 6,
+    title: "Portfolio personnel",
+    category: "Frontend",
+    image: "/Capture d'écran 2026-03-24 172124.png",
+    tech: ["Next.js", "React", "TypeScript"],
+    description: "Mon portfolio personnel avec présentation de mes projets, compétences et contact. Design moderne et responsive.",
+    demoUrl: "https://cube-mu-sand.vercel.app/",
+    codeUrl: "https://github.com/Le-markerNaguy/NumberOne.git",
+    size: "medium"
+  },
  {
-  "id": 6,
+  "id": 7,
   "title": "Application de gestion d'Université",
   "category": "Backend",
   "image": "/capture_gestion_Univ.png",
