@@ -1,85 +1,127 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { skillsData } from "@/data/skills"
-import { Server, Database, Shield, FileCode, RefreshCw, Settings, CheckCircle, Layers } from "lucide-react"
-import type { JSX } from "react"
+import { Server, Database, Shield, FileCode, RefreshCw, Layers, CheckCircle, Zap, Terminal } from "lucide-react"
+
+const bentoSkills = [
+  {
+    name: "Node.js",
+    icon: Server,
+    description: "Runtime JavaScript côté serveur performant et scalable.",
+    details: ["APIs RESTful", "Middleware", "Event-driven"],
+    size: "large",
+    color: "#8B5CF6",
+  },
+  {
+    name: "Express.js",
+    icon: Terminal,
+    description: "Framework web minimaliste et flexible pour Node.js.",
+    details: ["Routing", "Middleware", "Gestion d'erreurs"],
+    size: "small",
+    color: "#10B981",
+  },
+  {
+    name: "APIs REST",
+    icon: RefreshCw,
+    description: "Conception d'interfaces API robustes et documentées.",
+    details: ["CRUD", "Authentification JWT", "Validation"],
+    size: "small",
+    color: "#8B5CF6",
+  },
+  {
+    name: "MongoDB",
+    icon: Database,
+    description: "Base de données NoSQL orientée documents.",
+    details: ["Modélisation", "Agrégations", "Indexation"],
+    size: "small",
+    color: "#10B981",
+  },
+  {
+    name: "Prisma",
+    icon: Layers,
+    description: "ORM moderne pour Node.js et TypeScript.",
+    details: ["Schémas", "Migrations", "Requêtes typées"],
+    size: "small",
+    color: "#8B5CF6",
+  },
+  {
+    name: "Authentification",
+    icon: Shield,
+    description: "Systèmes d'authentification sécurisés.",
+    details: ["JWT", "BCrypt", "Sessions"],
+    size: "large",
+    color: "#10B981",
+  },
+  {
+    name: "Validation & Sécurité",
+    icon: CheckCircle,
+    description: "Bonnes pratiques de sécurisation des données.",
+    details: ["Validation Zod", "CORS", "Helmet"],
+    size: "small",
+    color: "#8B5CF6",
+  },
+  {
+    name: "Performance",
+    icon: Zap,
+    description: "Optimisation et scalabilité des applications.",
+    details: ["Caching", "Load Balancing", "Async/Await"],
+    size: "small",
+    color: "#10B981",
+  },
+]
 
 export default function SkillsSection() {
-  // Mapping des icônes pour chaque compétence
-  const getSkillIcon = (skillName: string) => {
-    const iconMap: Record<string, JSX.Element> = {
-      "Node.js": <Server className="w-5 h-5" />,
-      "Express.js": <RefreshCw className="w-5 h-5" />,
-      "APIs REST": <FileCode className="w-5 h-5" />,
-      MongoDB: <Database className="w-5 h-5" />,
-      Mongoose: <Database className="w-5 h-5" />,
-      Prisma: <Layers className="w-5 h-5" />,
-      Authentification: <Shield className="w-5 h-5" />,
-      "Gestion des fichiers": <FileCode className="w-5 h-5" />,
-      "Validation des données": <CheckCircle className="w-5 h-5" />,
-    }
-
-    return iconMap[skillName] || <Settings className="w-5 h-5" />
-  }
-
   return (
-    <section id="compétences" className="py-20 px-4 sm:px-6">
+    <section id="compétences" className="py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 font-serif"
+          className="text-center mb-16"
         >
-          Compétences Backend
-        </motion.h2>
-
-        {/* Introduction */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-center mb-12"
-        >
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Spécialisée dans le développement backend avec JavaScript, je maîtrise les technologies essentielles pour
-            créer des APIs robustes et des serveurs performants avec des ORM modernes.
-          </p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-serif">Compétences Backend</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#8B5CF6] to-[#10B981] rounded-full mx-auto" />
         </motion.div>
 
-        {/* Compétences détaillées */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {skillsData.backend.skills.map((skill, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[180px]">
+          {bentoSkills.map((skill, index) => (
             <motion.div
               key={skill.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-[#FED4BE]/30 dark:border-gray-700/50"
+              transition={{ delay: index * 0.08 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className={`group relative overflow-hidden rounded-2xl bg-white dark:bg-[#141129] border border-[#8B5CF6]/10 hover:border-[#8B5CF6]/30 transition-all duration-300 p-5 ${
+                skill.size === "large" ? "col-span-2 row-span-2" : "col-span-1 row-span-1"
+              }`}
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#FED4BE]/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  {getSkillIcon(skill.name)}
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[var(--skill-color)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="relative z-10 h-full flex flex-col">
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center mb-3 transition-colors duration-300"
+                  style={{ backgroundColor: `${skill.color}15` }}
+                >
+                  <skill.icon className="w-5 h-5" style={{ color: skill.color }} />
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-lg font-bold text-gray-800 dark:text-[#FED4BE]">{skill.name}</h3>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">{skill.description}</p>
-                  <ul className="list-disc list-inside mt-2">
-                    {skill.details.map((detail, index) => (
-                      <li key={index} className="text-gray-600 dark:text-gray-300 text-sm">
+
+                <h3 className="font-bold text-gray-900 dark:text-white mb-1">{skill.name}</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-2 line-clamp-2">{skill.description}</p>
+
+                {skill.size === "large" && (
+                  <ul className="mt-auto space-y-1">
+                    {skill.details.map((detail) => (
+                      <li key={detail} className="text-xs text-gray-400 dark:text-gray-500 flex items-center gap-1.5">
+                        <span className="w-1 h-1 rounded-full" style={{ backgroundColor: skill.color }} />
                         {detail}
                       </li>
                     ))}
                   </ul>
-                </div>
+                )}
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Technologies utilisées */}
       </div>
     </section>
   )

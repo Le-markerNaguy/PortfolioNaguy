@@ -2,18 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary: #fed4be;
-  --primary-dark: #f8b8a0;
-  --primary-light: #fff0eb;
-  --secondary: #90a955;
-  --secondary-dark: #748b44;
-  --accent:#f8b8a0;
-  --accent-dark: #f8b8a0;
-  --text: #333333;
-  --text-light: #666666;
-  --background: #fff9f7;
-  --background-dark: #1a1a2e;
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 262 83% 58%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 248 50% 8%;
+    --foreground: 0 0% 93%;
+    --card: 248 45% 12%;
+    --card-foreground: 0 0% 93%;
+    --popover: 248 45% 12%;
+    --popover-foreground: 0 0% 93%;
+    --primary: 262 83% 72%;
+    --primary-foreground: 248 50% 8%;
+    --secondary: 160 84% 54%;
+    --secondary-foreground: 248 50% 8%;
+    --muted: 248 30% 16%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 262 83% 72%;
+    --accent-foreground: 248 50% 8%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 93%;
+    --border: 248 30% 20%;
+    --input: 248 30% 20%;
+    --ring: 262 83% 72%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
 * {
@@ -29,35 +71,12 @@ html {
 body {
   font-family: var(--font-inter);
   line-height: 1.6;
-  background-color: var(--background);
-  color: var(--text);
-}
-
-.dark body {
-  background-color: var(--background-dark);
-  color: #f0f0f0;
 }
 
 .font-serif {
   font-family: var(--font-playfair);
 }
 
-/* Animations personnalisées */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Scrollbar personnalisée */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -67,15 +86,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
+  background: hsl(var(--primary) / 0.5);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-dark);
+  background: hsl(var(--primary) / 0.8);
 }
 
-/* Scrollbar fine pour les conteneurs */
 .scrollbar-thin::-webkit-scrollbar {
   width: 4px;
 }
@@ -85,18 +103,58 @@ body {
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: var(--primary);
+  background: hsl(var(--primary) / 0.5);
   border-radius: 2px;
 }
 
-/* Effets de glassmorphism */
 .glass {
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* Animations d'entrée */
+.dark .glass {
+  background: rgba(12, 10, 30, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.dark .glass-card {
+  background: rgba(20, 17, 41, 0.7);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.mesh-gradient {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15), transparent),
+    radial-gradient(ellipse 50% 50% at 80% 20%, rgba(16, 185, 129, 0.1), transparent),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(139, 92, 246, 0.08), transparent);
+}
+
+.dark .mesh-gradient {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.2), transparent),
+    radial-gradient(ellipse 50% 50% at 80% 20%, rgba(16, 185, 129, 0.15), transparent),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(139, 92, 246, 0.1), transparent);
+}
+
+.noise-overlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  pointer-events: none;
+}
+
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
@@ -110,65 +168,35 @@ body {
   }
 }
 
-/* Effets de hover avancés */
 .project-card {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(254, 212, 190, 0.25);
+  transform: translateY(-6px) scale(1.01);
 }
 
-/* Mode sombre */
-.dark {
-  color-scheme: dark;
-}
-
-.dark .glass {
-  background: rgba(26, 26, 46, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Responsive typography */
-@media (max-width: 640px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-}
-
-/* Boutons avec effets */
 .btn-gradient {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.8));
   transition: all 0.3s ease;
 }
 
 .btn-gradient:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(254, 212, 190, 0.4);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
 }
 
-/* Animations de chargement */
 .loading-shimmer {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--muted) / 0.5) 50%, hsl(var(--muted)) 75%);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
-/* Micro-interactions */
 .micro-bounce {
   transition: transform 0.2s ease;
 }
@@ -177,87 +205,20 @@ body {
   transform: scale(0.95);
 }
 
-/* Cadre losange pour la photo */
-.diamond-frame {
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
-/* Amélioration de la lisibilité des cartes de projet */
-.project-card-content {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
 
-.dark .project-card-content {
-  background: rgba(31, 41, 55, 0.95);
-}
-
-/* Styles spécifiques pour les projets */
-.project-image-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.project-image-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-image-overlay {
-  opacity: 1;
-}
-
-.project-tech-badge {
-  background-color: var(--primary-light);
-  color: var(--text);
-  border: 1px solid var(--primary);
-  transition: all 0.2s ease;
-}
-
-.project-tech-badge:hover {
-  background-color: var(--primary);
-  color: white;
-}
-
-/* Responsive design helpers */
-.responsive-container {
-  width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 640px) {
-  .responsive-container {
-    max-width: 640px;
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
   }
-}
-
-@media (min-width: 768px) {
-  .responsive-container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .responsive-container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .responsive-container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .responsive-container {
-    max-width: 1536px;
+  h2 {
+    font-size: 2rem;
   }
 }

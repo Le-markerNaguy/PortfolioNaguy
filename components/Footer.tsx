@@ -1,92 +1,82 @@
 "use client"
 
-import { Github, Mail, ExternalLink } from "lucide-react"
+import { Github, Mail, Heart } from "lucide-react"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="py-12 px-4 sm:px-6 border-t border-[#FED4BE]/20 dark:border-gray-700/50 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Logo et description */}
+    <footer className="relative overflow-hidden border-t border-[#8B5CF6]/10 dark:border-gray-700/20 bg-white dark:bg-[#0C0A1E]">
+      <div className="absolute inset-0 mesh-gradient opacity-50" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="text-center md:text-left">
-            <div className="text-2xl font-bold bg-gradient-to-r from-[#FED4BE] to-[#F8B8A0] bg-clip-text text-transparent mb-4">
+            <div className="text-2xl font-bold bg-gradient-to-r from-[#8B5CF6] to-[#10B981] bg-clip-text text-transparent mb-4">
               Naguy.dev
             </div>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Développeuse Backend JavaScript spécialisée dans la création d'APIs et serveurs web avec MongoDB et
-              Prisma.
+            <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed">
+              Développeuse Backend JavaScript spécialisée dans la création d&apos;APIs et serveurs web.
             </p>
-            <div className="flex justify-center md:justify-start space-x-4">
+            <div className="flex justify-center md:justify-start space-x-3">
               <a
                 href="https://github.com/Le-markerNaguy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#FED4BE]/10 flex items-center justify-center hover:bg-[#FED4BE]/30 transition-colors"
+                className="w-10 h-10 rounded-xl bg-[#8B5CF6]/10 flex items-center justify-center hover:bg-[#8B5CF6] hover:text-white transition-all duration-300 group"
+                aria-label="GitHub"
               >
-                <Github className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+                <Github className="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-white" />
               </a>
               <a
                 href="mailto:naguyjuccedem@gmail.com"
-                className="w-10 h-10 rounded-full bg-[#FED4BE]/10 flex items-center justify-center hover:bg-[#FED4BE]/30 transition-colors"
+                className="w-10 h-10 rounded-xl bg-[#8B5CF6]/10 flex items-center justify-center hover:bg-[#8B5CF6] hover:text-white transition-all duration-300 group"
+                aria-label="Email"
               >
-                <Mail className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+                <Mail className="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-white" />
               </a>
             </div>
           </div>
 
-          {/* Liens rapides */}
           <div className="text-center">
             <h3 className="text-lg font-bold mb-4">Liens rapides</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#accueil" className="text-gray-600 dark:text-gray-300 hover:text-[#FED4BE] transition-colors">
-                  Accueil
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#compétences"
-                  className="text-gray-600 dark:text-gray-300 hover:text-[#FED4BE] transition-colors"
-                >
-                  Compétences
-                </a>
-              </li>
-              <li>
-                <a href="#projets" className="text-gray-600 dark:text-gray-300 hover:text-[#FED4BE] transition-colors">
-                  Projets
-                </a>
-              </li>
-              <li>
-                <a href="#à-propos" className="text-gray-600 dark:text-gray-300 hover:text-[#FED4BE] transition-colors">
-                  À propos
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-[#FED4BE] transition-colors">
-                  Contact
-                </a>
-              </li>
+            <ul className="space-y-2.5">
+              {[
+                { label: "Accueil", href: "#accueil" },
+                { label: "Compétences", href: "#compétences" },
+                { label: "Projets", href: "#projets" },
+                { label: "À propos", href: "#à-propos" },
+                { label: "Contact", href: "#contact" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="text-gray-600 dark:text-gray-400 hover:text-[#8B5CF6] transition-colors text-sm"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact */}
           <div className="text-center md:text-right">
             <h3 className="text-lg font-bold mb-4">Contact</h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-2">naguyjuccedem@gmail.com</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-3 text-sm">naguyjuccedem@gmail.com</p>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-[#FED4BE] text-gray-800 rounded-lg text-sm font-medium hover:bg-[#F8B8A0] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white rounded-xl text-sm font-medium hover:shadow-glow transition-all duration-300"
             >
-              <ExternalLink className="w-4 h-4" />
               Me contacter
             </a>
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-[#FED4BE]/10 dark:border-gray-800 text-center text-gray-500 dark:text-gray-400">
+        <div className="mt-12 pt-8 border-t border-[#8B5CF6]/10 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500 dark:text-gray-500">
           <p>&copy; {currentYear} Naguy. Tous droits réservés.</p>
+          <p className="flex items-center gap-1">
+            Fait avec <Heart className="w-4 h-4 text-[#8B5CF6] fill-[#8B5CF6]" /> par Naguy
+          </p>
         </div>
       </div>
     </footer>

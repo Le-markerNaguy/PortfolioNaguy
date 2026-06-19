@@ -45,11 +45,19 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        lavande: "#B892FF",
-        saumon: "#FFC2E2",
-        "vert-menthe": "#90A955",
-        "fond-clair": "#F8F5FF",
-        "fond-sombre": "#1A1A2E",
+        violet: {
+          DEFAULT: "#8B5CF6",
+          hover: "#7C3AED",
+          light: "#EDE9FE",
+        },
+        emerald: {
+          DEFAULT: "#10B981",
+          hover: "#059669",
+          light: "#D1FAE5",
+        },
+        "bg-clair": "#FAFAFA",
+        "bg-sombre": "#0C0A1E",
+        "card-sombre": "#141129",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -62,8 +70,12 @@ module.exports = {
       },
       animation: {
         float: "float 3s ease-in-out infinite",
+        "float-slow": "float 6s ease-in-out infinite",
         "fade-in-up": "fadeInUp 0.6s ease-out forwards",
+        "gradient-shift": "gradientShift 8s ease infinite",
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         shimmer: "shimmer 2s infinite",
+        spotlight: "spotlight 2s ease .75s 1 forwards",
       },
       keyframes: {
         float: {
@@ -71,19 +83,26 @@ module.exports = {
           "50%": { transform: "translateY(-10px)" },
         },
         fadeInUp: {
-          to: {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        gradientShift: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
         },
         shimmer: {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
+        spotlight: {
+          "0%": { opacity: "0", transform: "translate(-72%, -62%) scale(0.5)" },
+          "100%": { opacity: "1", transform: "translate(-50%, -40%) scale(1)" },
+        },
       },
       boxShadow: {
         soft: "0 4px 12px rgba(0, 0, 0, 0.1)",
-        glow: "0 0 20px rgba(184, 146, 255, 0.3)",
+        glow: "0 0 20px rgba(139, 92, 246, 0.3)",
+        "glow-strong": "0 0 40px rgba(139, 92, 246, 0.4)",
+        "emerald-glow": "0 0 20px rgba(16, 185, 129, 0.3)",
       },
       backdropBlur: {
         xs: "2px",
